@@ -15,5 +15,34 @@
     "prefer-stable": true,
     "require": {
       "php": ">=7.2.5"
+    },
+    "repositories": [
+      {
+        "type": "vcs",
+        "url": "https://github.com/publishpress/library-publishpress-translator.git"
+      }
+    ],
+    "require-dev": {
+      "publishpress/translations": "dev-development"
+    },
+    "scripts": {
+      "translate": [
+        "vendor/bin/publishpress-translate translate"
+      ],
+      "translate:dry-run": [
+        "vendor/bin/publishpress-translate translate --dry-run"
+      ],
+      "translate:download": [
+        "vendor/bin/publishpress-translate download"
+      ],
+      "translate:upload": [
+        "vendor/bin/publishpress-translate upload"
+      ],
+      "translate:force": [
+        "vendor/bin/publishpress-translate translate --force"
+      ],
+      "translate:force-custom": [
+        "vendor/bin/publishpress-translate translate --force --custom"
+      ]
     }
 }
